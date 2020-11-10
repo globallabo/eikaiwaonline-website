@@ -9,21 +9,21 @@
 
 	if(isset($_POST['submit'])) {
 		// Check for the honeypot input field meant to catch bots
-		if(!empty($_POST['website'])) {
+		if(!empty($_POST['website']) or preg_match('/http|www/i',$_POST['message'])) {
 			// die();
 			// Give an error message
 			echo "<h1>問題が発生しました</h1>";
 			echo "URLs are not allowed.";
+			echo "<p><a href=\"javascript:history.back();\">前のページに戻ってください</a></p>";
 		}
 		else {
 			// $to = "labo@5star-english.jp"; // this is the recipient's e-mail address
 			$to = "chris@5star-english.jp";
 	    $from = $_POST['email'] ?? "無記入"; // this is the sender's e-mail address
 	    $name = $_POST['name'] ?? "無記入";
-	    $subject = "Linove Elite Business Website Form Submission";
+	    $subject = "Linove 5star英会話 Online Website Form Submission";
 	    $form_message = $_POST['message'] ?? "メッセージはありません。";
 	    $message = $name . ", with the e-mail address " . $from . " wrote the following:" . "\n\n" . $form_message . "\n\n";
-
 			$message .= "以下の項目が選択されました。\n\n";
 			$application_details = $_POST['application-details'] ?? NULL;
 			if ($application_details) {
@@ -39,12 +39,14 @@
 			mail($to,$subject,$message,$headers);
 	    echo "<h1>送信完了</h1>";
 	    echo "<p>お問い合わせありがとうございます。メッセージが正常に送信されました。折り返し担当より回答させていただきますので、今しばらくお待ちください。</p>";
+			echo "<p><a href=\"index.html\">前のページに戻ってください</a></p>";
 		}
 	}
 	else {
 		echo "<h1>問題が発生しました</h1>";
+		echo "<p><a href=\"index.html\">前のページに戻ってください</a></p>";
 	}
 ?>
-	<p><a href="index.html">前のページに戻ってください</a></p>
+
 </body>
 </html>

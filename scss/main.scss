@@ -278,7 +278,7 @@ main section#contact .contact-form form textarea {
 }
 // This is a honeypot field to filter out bots using the form
 main section#contact .contact-form form #website {
-  display: none;
+  // display: none;
 }
 main section#contact .contact-form form input[type="submit"] {
   background-color: gray;
