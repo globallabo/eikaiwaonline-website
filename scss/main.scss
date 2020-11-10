@@ -278,7 +278,7 @@ main section#contact .contact-form form textarea {
 }
 // This is a honeypot field to filter out bots using the form
 main section#contact .contact-form form #website {
-  // display: none;
+  display: none;
 }
 main section#contact .contact-form form input[type="submit"] {
   background-color: gray;
@@ -325,4 +325,25 @@ main section#contact .logo p {
   font-size: 1.6rem;
   font-weight: 600;
   text-align: center;
+}
+
+// Styling for Form Submitted page
+main section#form-submitted {
+  width: $primary-width;
+  text-align: center;
+  font-size: 2rem;
+}
+main section#form-submitted h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: $dark-red;
+}
+main section#form-submitted .button-back {
+  background-color: gray;
+  color: $white-text;
+  font-size: 1.5rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 30px;
 }
