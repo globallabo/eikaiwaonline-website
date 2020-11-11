@@ -287,6 +287,17 @@ main section#contact .contact-form form input[type="submit"] {
   padding: 10px 30px;
 }
 
+.smartmanage {
+  margin-top: 2rem;
+  text-align: center;
+}
+.smartmanage h2 {
+  text-align: center;
+  color: $main-red;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
 main section#contact .phone-and-logo {
   width: $secondary-width;
   margin-top: 4rem;
