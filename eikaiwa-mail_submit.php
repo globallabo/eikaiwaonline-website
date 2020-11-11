@@ -22,7 +22,7 @@
 		if(!empty($_POST['website']) or preg_match('/http|www/i',$_POST['message'])) {
 			// Give an error message
 			echo "<h1>問題が発生しました</h1>";
-			echo "<p>URLs are not allowed.</p>";
+			echo "<p>URLを含むメッセージは許可されていません。</p>";
 			echo "<p><a class=\"button-back\" href=\"javascript:history.back();\">前のページに戻ってください</a></p>";
 		}
 		else {
