@@ -286,6 +286,11 @@ main section#contact .contact-form form input[type="submit"] {
   border: none;
   padding: 10px 30px;
 }
+main section#contact .contact-form a {
+  color: #333333;
+  text-decoration: none;
+  border-bottom: 1px #333333 dashed;
+}
 
 .smartmanage {
   margin-top: 2rem;
